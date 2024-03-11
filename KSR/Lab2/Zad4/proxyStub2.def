@@ -1,0 +1,7 @@
+LIBRARY Zad4.dll
+
+EXPORTS
+DllCanUnloadNow
+DllGetClassObject
+DllRegisterServer
+DllUnregisterServer
