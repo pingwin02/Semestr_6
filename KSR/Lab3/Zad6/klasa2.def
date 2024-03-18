@@ -1,0 +1,5 @@
+LIBRARY Zad6.dll
+
+EXPORTS
+	DllGetClassObject PRIVATE
+	DllCanUnloadNow PRIVATE
