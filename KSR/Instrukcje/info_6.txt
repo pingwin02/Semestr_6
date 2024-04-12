@@ -1,0 +1,38 @@
+1. publikacja informacji o usłudze (self-hosting)		15%
+   proszę udostępnić usługę z metodą:
+   string ScalNapisy(string a, string b)
+   i opublikować informacje o niej na lokalnym komputerze
+   na porcie 30703
+2. wyszukiwanie usługi						15%
+   należy wyszukać opublikowaną przez siebie usługę i skorzystać
+   z niej we własnym kliencie
+3. REST: proszę udostępnić bezparametrową metodę zwracającą	20%
+   zawartość pliku index.xhtml, dostępną pod adresem
+   <adres serwisu>/index.html i analogicznie plik scripts.js.
+   (serwer hostowany w IIS)
+4. REST: proszę dodatkowo zaimplementować metodę dodającą dwie	15%
+   liczby i zwracającą int pod adresem Dodaj/parametr1/parametr2
+   obsługującą zapytania typu POST
+5. klient w C# wołający metodę z pkt 4.				15%
+6. routing: klient, router i dwa serwisy implementujące ten	20%
+   sam interfejs z jedną metodą Dodaj, zwracającą sumę swoich
+   parametrów oraz drukujących dowolną informację na konsoli.
+   Jeden z serwisów powinien być zapasowy: routing
+   przekazuje wołania do pierwszego serwisu, chyba, że ten
+   jest niedostępny, wtedy do drugiego.
+   Na potrzeby dokumentacji (print screen) uruchomić tylko serwis podstawowy,
+   później obydwa i na końcu tylko zapasowy. Zamieścić wydruk z 4 konsol.
+   serwery i router: self-hosted
+   binding: dowolny
+
+uwaga: wysyłając kody proszę dołączyć również plik web.config
+i plik projektu dla zadań 3 i 4
+
+Uwagi:
+Po zakończeniu zadania proszę przesłać wszystkie pliki kodu, konfiguracyjne (.cs, .config)
+oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
+Proszę również dołączyć skompilowane pliki: exe oraz dll.
+Podstawą oceny są również przynajmniej cztery screeny z działających programów. Zadanie od 1-2 klienta odkrywającego usługę, 3-4 z poprawnego działania formularza, 5 klienta łączącego się z usługą rest i 6 z 4 konsol programu.
+Proszę opróżnić foldery Debug i Release zostawiając jedynie pliki .exe i .dll.
+Proszę również usunąć ukryty folder .vs.
+Pliki należy spakować do archiwum ZIP i wysłać na platformie e-nauczanie.
