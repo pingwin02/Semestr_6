@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY bw_188597 "http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/damian/ontologies/2024/3/bw_s188597#"
+     xml:base="http://www.semanticweb.org/damian/ontologies/2024/3/bw_s188597"
+     xmlns:bw_188597="http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#obejmuje -->
+
+    <owl:ObjectProperty rdf:about="&bw_188597;obejmuje">
+        <rdfs:range rdf:resource="&bw_188597;Miejsce"/>
+        <rdfs:domain rdf:resource="&bw_188597;Trasa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#odbywaSieNa -->
+
+    <owl:ObjectProperty rdf:about="&bw_188597;odbywaSieNa">
+        <rdfs:range rdf:resource="&bw_188597;Trasa"/>
+        <rdfs:domain rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#organizuje -->
+
+    <owl:ObjectProperty rdf:about="&bw_188597;organizuje">
+        <rdfs:domain rdf:resource="&bw_188597;BiuroPodrozy"/>
+        <rdfs:range rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#wykupil -->
+
+    <owl:ObjectProperty rdf:about="&bw_188597;wykupil">
+        <rdfs:domain rdf:resource="&bw_188597;Klient"/>
+        <rdfs:range rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#AtrakcjaTurystyczna -->
+
+    <owl:Class rdf:about="&bw_188597;AtrakcjaTurystyczna">
+        <rdfs:subClassOf rdf:resource="&bw_188597;Miejsce"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Zakwaterowanie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#BiuroPodrozy -->
+
+    <owl:Class rdf:about="&bw_188597;BiuroPodrozy">
+        <owl:disjointWith rdf:resource="&bw_188597;Klient"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Miejsce"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Trasa"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#Klient -->
+
+    <owl:Class rdf:about="&bw_188597;Klient">
+        <owl:disjointWith rdf:resource="&bw_188597;Miejsce"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Trasa"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#Miejsce -->
+
+    <owl:Class rdf:about="&bw_188597;Miejsce">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&bw_188597;AtrakcjaTurystyczna"/>
+                    <rdf:Description rdf:about="&bw_188597;Zakwaterowanie"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="&bw_188597;Trasa"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#Trasa -->
+
+    <owl:Class rdf:about="&bw_188597;Trasa">
+        <owl:disjointWith rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#TrasaDluga -->
+
+    <owl:Class rdf:about="&bw_188597;TrasaDluga">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bw_188597;obejmuje"/>
+                <owl:onClass rdf:resource="&bw_188597;Zakwaterowanie"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&bw_188597;Trasa"/>
+        <owl:disjointWith rdf:resource="&bw_188597;TrasaKrotka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#TrasaKrotka -->
+
+    <owl:Class rdf:about="&bw_188597;TrasaKrotka">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&bw_188597;obejmuje"/>
+                        <owl:allValuesFrom rdf:resource="&bw_188597;AtrakcjaTurystyczna"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&bw_188597;obejmuje"/>
+                        <owl:onClass rdf:resource="&bw_188597;AtrakcjaTurystyczna"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&bw_188597;Trasa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#Wycieczka -->
+
+    <owl:Class rdf:about="&bw_188597;Wycieczka">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bw_188597;odbywaSieNa"/>
+                <owl:onClass rdf:resource="&bw_188597;Trasa"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#WycieczkaGrupowa -->
+
+    <owl:Class rdf:about="&bw_188597;WycieczkaGrupowa">
+        <rdfs:subClassOf rdf:resource="&bw_188597;Wycieczka"/>
+        <owl:disjointWith rdf:resource="&bw_188597;WycieczkaIndywidualna"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Wyprawa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#WycieczkaIndywidualna -->
+
+    <owl:Class rdf:about="&bw_188597;WycieczkaIndywidualna">
+        <rdfs:subClassOf rdf:resource="&bw_188597;Wycieczka"/>
+        <owl:disjointWith rdf:resource="&bw_188597;Wyprawa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#Wyprawa -->
+
+    <owl:Class rdf:about="&bw_188597;Wyprawa">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&bw_188597;odbywaSieNa"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&bw_188597;obejmuje"/>
+                        <owl:onClass rdf:resource="&bw_188597;Zakwaterowanie"/>
+                        <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&bw_188597;Wycieczka"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#Zakwaterowanie -->
+
+    <owl:Class rdf:about="&bw_188597;Zakwaterowanie">
+        <rdfs:subClassOf rdf:resource="&bw_188597;Miejsce"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#egzotycznyRaj -->
+
+    <owl:NamedIndividual rdf:about="&bw_188597;egzotycznyRaj">
+        <bw_188597:organizuje rdf:resource="&bw_188597;plazeAdriatyku"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#jan -->
+
+    <owl:NamedIndividual rdf:about="&bw_188597;jan">
+        <bw_188597:wykupil rdf:resource="&bw_188597;plazeAdriatyku"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#plazeAdriatyku -->
+
+    <owl:NamedIndividual rdf:about="&bw_188597;plazeAdriatyku">
+        <bw_188597:odbywaSieNa rdf:resource="&bw_188597;trasaMarzen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#polignanoAMare -->
+
+    <owl:NamedIndividual rdf:about="&bw_188597;polignanoAMare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/3/bw_188597#trasaMarzen -->
+
+    <owl:NamedIndividual rdf:about="&bw_188597;trasaMarzen">
+        <bw_188597:obejmuje rdf:resource="&bw_188597;polignanoAMare"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
