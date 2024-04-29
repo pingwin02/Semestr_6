@@ -9,6 +9,7 @@ internal/
 port_*/
 .metadata/
 internalTables/
+filestore/
 
 # Packages #
 *.7z
