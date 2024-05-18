@@ -3,7 +3,7 @@
 PARAM (
     [string] $SolutionFilesPath = "."
 )
-$folders_To_delete = @('*.vs*','*x64*','*.tlog*')
+$folders_To_delete = @('*packages*','*.vs*','*x64*','*.tlog*')
 
 function Remove-Tree-Directly($Path)
 { 
