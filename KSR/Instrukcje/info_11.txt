@@ -1,39 +1,18 @@
-Proszę zaimplementować i uruchomić w emulatorze Azure
-serwer WCF oferujący użytkownikom przechowywanie plików.
-Każdy użytkownik powinien mieć osobny zbiór plików
-(dwoje użytkowników może mieć pliki o takiej samej nazwie
-i nie powinny być one pomylone) i zbiór ten powinien
-być trwały -- wylogowanie nie powinno powodować utraty plików.
-Po wylogowaniu funkcje Put i Get, dla nieaktualnego już idsesji
-nie powinny dodawać/zwracać plików z/do zbiorów użytkownika.
-
-Uruchamiany projekt: Visual C# -> Cloud -> Usługa w chmurze platformy Azure (dodajemy rola usługi sieci Web WCF).
-
-Metody serwisu:
- - Create(login, hasło)					20%
+Proszę napisać i uruchomić w emulatorze
+Serwer WCF z metodami:
+ - Create(login, hasło)                20%
    tworzy użytkownika
- - Login(login, hasło)					20%
+ - Login(login, hasło)                20%
    sprawdza, czy użytkownik istnieje i ma dane hasło;
    jeżeli tak, tworzy sesję o nowym identyfikatorze
    (Guid.NewGuid()) i zwraca ten identyfikator
- - Logout(login)					10%
+ - Logout(login)                10%
    usuwa sesję dla danego użytkownika
- - Put(nazwa, tresc(string), idsesji)			30%
+ - Put(nazwa, treść(string), id_sesji)        30%
    tworzy plik (BLOB) o podanej nazwe i podanej treści,
-   o ile idsesji jest poprawne (istnieje sesja z danym
-   identyfikatorem)
- - Get(nazwa, idsesji) -> string			20%
-   pobiera zawartość pliku o podanej nazwie,
-   o ile idsesji jest poprawne; plik pobierany jest
-   ze zbioru użytkownika, który utworzył daną sesję
-
-Dane użytkowników i sesji proszę trzymać w tabelach.
-Dane plików proszę trzymać w BLOBach.
-
-Uwagi:
-Po zakończeniu zadania proszę przesłać wszystkie pliki kodu, konfiguracyjne (.cs, .config)
-oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
-Podstawą oceny są również screeny z działających programów.
-Proszę opróżnić foldery Debug i Release zostawiając jedynie pliki .exe i .dll.
-Proszę również usunąć folder packages oraz ukryty folder .vs.
-Pliki należy spakować do archiwum ZIP i wysłać na platformie e-nauczanie.
+   o ile id_sesji jest poprawne (dla użytkownika, który
+   zalogował się w podanej sesji)
+ - Get(nazwa, id_sesji) -> string        20%
+   pobiera zawartość pliku o podanej nazwe,
+   o ile id_sesji jest poprawne (dla użytkownika, który
+   zalogował się w podanej sesji)
