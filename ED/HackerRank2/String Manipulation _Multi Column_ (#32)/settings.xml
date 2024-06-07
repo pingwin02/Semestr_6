@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <config key="column_selection">
+            <entry key="filter-type" type="xstring" value="STANDARD"/>
+            <config key="included_names">
+                <entry key="array-size" type="xint" value="213"/>
+                <entry key="0" type="xstring" value="CountryNumeric2"/>
+                <entry key="1" type="xstring" value="q1AgeBeginCoding"/>
+                <entry key="2" type="xstring" value="q2Age"/>
+                <entry key="3" type="xstring" value="q3Gender"/>
+                <entry key="4" type="xstring" value="q4Education"/>
+                <entry key="5" type="xstring" value="q5DegreeFocus"/>
+                <entry key="6" type="xstring" value="q6LearnCodeUni"/>
+                <entry key="7" type="xstring" value="q6LearnCodeSelfTaught"/>
+                <entry key="8" type="xstring" value="q6LearnCodeAccelTrain"/>
+                <entry key="9" type="xstring" value="q6LearnCodeDontKnowHowToYet"/>
+                <entry key="10" type="xstring" value="q7Level1"/>
+                <entry key="11" type="xstring" value="q8JobLevel"/>
+                <entry key="12" type="xstring" value="q8Student"/>
+                <entry key="13" type="xstring" value="q9CurrentRole"/>
+                <entry key="14" type="xstring" value="q10Industry"/>
+                <entry key="15" type="xstring" value="q12JobCritPrefTechStack"/>
+                <entry key="16" type="xstring" value="q12JobCritCompMission"/>
+                <entry key="17" type="xstring" value="q12JobCritCompCulture"/>
+                <entry key="18" type="xstring" value="q12JobCritWorkLifeBal"/>
+                <entry key="19" type="xstring" value="q12JobCritCompensation"/>
+                <entry key="20" type="xstring" value="q12JobCritProximity"/>
+                <entry key="21" type="xstring" value="q12JobCritPerks"/>
+                <entry key="22" type="xstring" value="q12JobCritSmartPeopleTeam"/>
+                <entry key="23" type="xstring" value="q12JobCritImpactwithProduct"/>
+                <entry key="24" type="xstring" value="q12JobCritInterestProblems"/>
+                <entry key="25" type="xstring" value="q12JobCritFundingandValuation"/>
+                <entry key="26" type="xstring" value="q12JobCritStability"/>
+                <entry key="27" type="xstring" value="q12JobCritProfGrowth"/>
+                <entry key="28" type="xstring" value="q13EmpMeasWhiteboard"/>
+                <entry key="29" type="xstring" value="q13EmpMeasHackerRank"/>
+                <entry key="30" type="xstring" value="q13EmpMeasTechPhoneInt"/>
+                <entry key="31" type="xstring" value="q13EmpMeasTakeHomeProject"/>
+                <entry key="32" type="xstring" value="q13EmpMeasResume"/>
+                <entry key="33" type="xstring" value="q13EmpMeasPastWork"/>
+                <entry key="34" type="xstring" value="q14GoodReflecAbilities"/>
+                <entry key="35" type="xstring" value="q15Level2"/>
+                <entry key="36" type="xstring" value="q16HiringManager"/>
+                <entry key="37" type="xstring" value="q17HirChaInterviews"/>
+                <entry key="38" type="xstring" value="q17HirChaHardAssessSkills"/>
+                <entry key="39" type="xstring" value="q17HirChaNotEnoughTalent"/>
+                <entry key="40" type="xstring" value="q17HirChaNoDiversCandidates"/>
+                <entry key="41" type="xstring" value="q17HirChaCompfromCompanies"/>
+                <entry key="42" type="xstring" value="q17HirChaJobDescript"/>
+                <entry key="43" type="xstring" value="q18NumDevelopHireWithinNextYear"/>
+                <entry key="44" type="xstring" value="q19TalToolResumeScreen"/>
+                <entry key="45" type="xstring" value="q19TalToolReferral"/>
+                <entry key="46" type="xstring" value="q19TalToolHackerRank"/>
+                <entry key="47" type="xstring" value="q19TalToolPersTest"/>
+                <entry key="48" type="xstring" value="q19TalToolRemoteorLiveIntTool"/>
+                <entry key="49" type="xstring" value="q19TalToolOutsourceHumIntPanel"/>
+                <entry key="50" type="xstring" value="q20CandYearExp"/>
+                <entry key="51" type="xstring" value="q20CandCompScienceDegree"/>
+                <entry key="52" type="xstring" value="q20CandCodingBootcamp"/>
+                <entry key="53" type="xstring" value="q20CandSkillCert"/>
+                <entry key="54" type="xstring" value="q20CandHackerRankActivity"/>
+                <entry key="55" type="xstring" value="q20CandGithubPersProj"/>
+                <entry key="56" type="xstring" value="q20CandOpenSourceContrib"/>
+                <entry key="57" type="xstring" value="q20CandHackathonPart"/>
+                <entry key="58" type="xstring" value="q20CandPrevWorkExp"/>
+                <entry key="59" type="xstring" value="q20CandPrestigeDegree"/>
+                <entry key="60" type="xstring" value="q20CandLinkInSkills"/>
+                <entry key="61" type="xstring" value="q20CandGithubPersProj2"/>
+                <entry key="62" type="xstring" value="q21CoreCompProbSolv"/>
+                <entry key="63" type="xstring" value="q21CoreCompProgLang"/>
+                <entry key="64" type="xstring" value="q21CoreCompFrameworkProf"/>
+                <entry key="65" type="xstring" value="q21CoreCompDebugging"/>
+                <entry key="66" type="xstring" value="q21CoreCompCodebaseNav"/>
+                <entry key="67" type="xstring" value="q21CoreCompPerfOpt"/>
+                <entry key="68" type="xstring" value="q21CoreCompCodeReview"/>
+                <entry key="69" type="xstring" value="q21CoreCompDatabaseDesign"/>
+                <entry key="70" type="xstring" value="q21CoreCompSysDesign"/>
+                <entry key="71" type="xstring" value="q21CoreCompTesting"/>
+                <entry key="72" type="xstring" value="q22LangProfAgnostic"/>
+                <entry key="73" type="xstring" value="q22LangProfC"/>
+                <entry key="74" type="xstring" value="q22LangProfCPlusPlus"/>
+                <entry key="75" type="xstring" value="q22LangProfJava"/>
+                <entry key="76" type="xstring" value="q22LangProfPython"/>
+                <entry key="77" type="xstring" value="q22LangProfRuby"/>
+                <entry key="78" type="xstring" value="q22LangProfJavascript"/>
+                <entry key="79" type="xstring" value="q22LangProfCSharp"/>
+                <entry key="80" type="xstring" value="q22LangProfGo"/>
+                <entry key="81" type="xstring" value="q22LangProfScala"/>
+                <entry key="82" type="xstring" value="q22LangProfPerl"/>
+                <entry key="83" type="xstring" value="q22LangProfSwift"/>
+                <entry key="84" type="xstring" value="q22LangProfPascal"/>
+                <entry key="85" type="xstring" value="q22LangProfClojure"/>
+                <entry key="86" type="xstring" value="q22LangProfPHP"/>
+                <entry key="87" type="xstring" value="q22LangProfHaskell"/>
+                <entry key="88" type="xstring" value="q22LangProfLua"/>
+                <entry key="89" type="xstring" value="q22LangProfR"/>
+                <entry key="90" type="xstring" value="q23FrameAngularJS"/>
+                <entry key="91" type="xstring" value="q23FrameReact"/>
+                <entry key="92" type="xstring" value="q23FrameVueDotJS"/>
+                <entry key="93" type="xstring" value="q23FrameEmber"/>
+                <entry key="94" type="xstring" value="q23FrameBackboneDotJS"/>
+                <entry key="95" type="xstring" value="q23FrameSpring"/>
+                <entry key="96" type="xstring" value="q23FrameJSF"/>
+                <entry key="97" type="xstring" value="q23FrameStruts"/>
+                <entry key="98" type="xstring" value="q23FrameNodeDotJS"/>
+                <entry key="99" type="xstring" value="q23FrameExpressJS"/>
+                <entry key="100" type="xstring" value="q23FrameMeteor"/>
+                <entry key="101" type="xstring" value="q23FrameDjango"/>
+                <entry key="102" type="xstring" value="q23FramePyramid"/>
+                <entry key="103" type="xstring" value="q23FrameRubyonRails"/>
+                <entry key="104" type="xstring" value="q23FramePadrino"/>
+                <entry key="105" type="xstring" value="q23FrameASP"/>
+                <entry key="106" type="xstring" value="q23FrameNetCore"/>
+                <entry key="107" type="xstring" value="q23FrameCocoa"/>
+                <entry key="108" type="xstring" value="q23FrameReactNative"/>
+                <entry key="109" type="xstring" value="q23FrameRubyMotion"/>
+                <entry key="110" type="xstring" value="q24VimorEmacs"/>
+                <entry key="111" type="xstring" value="q25LangC"/>
+                <entry key="112" type="xstring" value="q25LangCPlusPlus"/>
+                <entry key="113" type="xstring" value="q25LangJava"/>
+                <entry key="114" type="xstring" value="q25LangPython"/>
+                <entry key="115" type="xstring" value="q25LangRuby"/>
+                <entry key="116" type="xstring" value="q25LangJavascript"/>
+                <entry key="117" type="xstring" value="q25LangCSharp"/>
+                <entry key="118" type="xstring" value="q25LangGo"/>
+                <entry key="119" type="xstring" value="q25Scala"/>
+                <entry key="120" type="xstring" value="q25LangPerl"/>
+                <entry key="121" type="xstring" value="q25LangSwift"/>
+                <entry key="122" type="xstring" value="q25LangPascal"/>
+                <entry key="123" type="xstring" value="q25LangClojure"/>
+                <entry key="124" type="xstring" value="q25LangPHP"/>
+                <entry key="125" type="xstring" value="q25LangHaskell"/>
+                <entry key="126" type="xstring" value="q25LangLua"/>
+                <entry key="127" type="xstring" value="q25LangR"/>
+                <entry key="128" type="xstring" value="q25LangRust"/>
+                <entry key="129" type="xstring" value="q25LangTypescript"/>
+                <entry key="130" type="xstring" value="q25LangKotlin"/>
+                <entry key="131" type="xstring" value="q25LangJulia"/>
+                <entry key="132" type="xstring" value="q25LangErlang"/>
+                <entry key="133" type="xstring" value="q25LangOcaml"/>
+                <entry key="134" type="xstring" value="q26FrameLearnAngularJS"/>
+                <entry key="135" type="xstring" value="q26FrameLearnReact"/>
+                <entry key="136" type="xstring" value="q26FrameLearnVueDotjs"/>
+                <entry key="137" type="xstring" value="q26FrameLearnEmber"/>
+                <entry key="138" type="xstring" value="q26FrameLearnBackboneDotjs"/>
+                <entry key="139" type="xstring" value="q26FrameLearnSpring"/>
+                <entry key="140" type="xstring" value="q26FrameLearnJSF"/>
+                <entry key="141" type="xstring" value="q26FrameLearnStruts"/>
+                <entry key="142" type="xstring" value="q26FrameLearnDjango"/>
+                <entry key="143" type="xstring" value="q26FrameLearnPyramid"/>
+                <entry key="144" type="xstring" value="q26FrameLearnRubyonRails"/>
+                <entry key="145" type="xstring" value="q26FrameLearnPadrino"/>
+                <entry key="146" type="xstring" value="q26FrameLearnASP"/>
+                <entry key="147" type="xstring" value="q26FrameLearnNetCore"/>
+                <entry key="148" type="xstring" value="q26FrameLearnNodeDotjs"/>
+                <entry key="149" type="xstring" value="q26FrameLearnExpressJS"/>
+                <entry key="150" type="xstring" value="q26FrameLearnMetero"/>
+                <entry key="151" type="xstring" value="q26FrameLearnCocoa"/>
+                <entry key="152" type="xstring" value="q26FrameLearnReactNative"/>
+                <entry key="153" type="xstring" value="q26FrameLearnRubyMotion"/>
+                <entry key="154" type="xstring" value="q26FrameLearnPadrino2"/>
+                <entry key="155" type="xstring" value="q26FrameLearnDjango2"/>
+                <entry key="156" type="xstring" value="q26FrameLearnPyramid2"/>
+                <entry key="157" type="xstring" value="q27EmergingTechSkill"/>
+                <entry key="158" type="xstring" value="q28LoveC"/>
+                <entry key="159" type="xstring" value="q28LoveCPlusPlus"/>
+                <entry key="160" type="xstring" value="q28LoveJava"/>
+                <entry key="161" type="xstring" value="q28LovePython"/>
+                <entry key="162" type="xstring" value="q28LoveRuby"/>
+                <entry key="163" type="xstring" value="q28LoveJavascript"/>
+                <entry key="164" type="xstring" value="q28LoveCSharp"/>
+                <entry key="165" type="xstring" value="q28LoveGo"/>
+                <entry key="166" type="xstring" value="q28LoveScala"/>
+                <entry key="167" type="xstring" value="q28LovePerl"/>
+                <entry key="168" type="xstring" value="q28LoveSwift"/>
+                <entry key="169" type="xstring" value="q28LovePascal"/>
+                <entry key="170" type="xstring" value="q28LoveClojure"/>
+                <entry key="171" type="xstring" value="q28LovePHP"/>
+                <entry key="172" type="xstring" value="q28LoveHaskell"/>
+                <entry key="173" type="xstring" value="q28LoveLua"/>
+                <entry key="174" type="xstring" value="q28LoveR"/>
+                <entry key="175" type="xstring" value="q28LoveRust"/>
+                <entry key="176" type="xstring" value="q28LoveKotlin"/>
+                <entry key="177" type="xstring" value="q28LoveTypescript"/>
+                <entry key="178" type="xstring" value="q28LoveErlang"/>
+                <entry key="179" type="xstring" value="q28LoveJulia"/>
+                <entry key="180" type="xstring" value="q28LoveOCaml"/>
+                <entry key="181" type="xstring" value="q29FrameLoveAngularJS"/>
+                <entry key="182" type="xstring" value="q29FrameLoveReact"/>
+                <entry key="183" type="xstring" value="q29FrameLoveVuedotjs"/>
+                <entry key="184" type="xstring" value="q29FrameLoveEmber"/>
+                <entry key="185" type="xstring" value="q29FrameLoveBackboneDotjs"/>
+                <entry key="186" type="xstring" value="q29FrameLoveSpring"/>
+                <entry key="187" type="xstring" value="q29FrameLoveJSF"/>
+                <entry key="188" type="xstring" value="q29FrameLoveStruts"/>
+                <entry key="189" type="xstring" value="q29FrameLoveDjango"/>
+                <entry key="190" type="xstring" value="q29FrameLovePyramid"/>
+                <entry key="191" type="xstring" value="q29FrameLoveRubyonRails"/>
+                <entry key="192" type="xstring" value="q29FrameLovePadrino"/>
+                <entry key="193" type="xstring" value="q29FrameLoveASP"/>
+                <entry key="194" type="xstring" value="q29FrameLoveNetCore"/>
+                <entry key="195" type="xstring" value="q29FrameLoveNodeDotjs"/>
+                <entry key="196" type="xstring" value="q29FrameLoveExpressJS"/>
+                <entry key="197" type="xstring" value="q29FrameLoveMeteor"/>
+                <entry key="198" type="xstring" value="q29FrameLoveCocoa"/>
+                <entry key="199" type="xstring" value="q29FrameLoveReactNative"/>
+                <entry key="200" type="xstring" value="q29FrameLoveRubyMotion"/>
+                <entry key="201" type="xstring" value="q30LearnCodeStackOverflow"/>
+                <entry key="202" type="xstring" value="q30LearnCodeYoutube"/>
+                <entry key="203" type="xstring" value="q30LearnCodeMOOC"/>
+                <entry key="204" type="xstring" value="q30LearnCodeCompCodingSites"/>
+                <entry key="205" type="xstring" value="q30LearnCodeOnlineTutorial"/>
+                <entry key="206" type="xstring" value="q30LearnCodeBooks"/>
+                <entry key="207" type="xstring" value="q30LearnCodeAcademicPaper"/>
+                <entry key="208" type="xstring" value="q31Level3"/>
+                <entry key="209" type="xstring" value="q32RecommendHackerRank"/>
+                <entry key="210" type="xstring" value="q33HackerRankChallforJob"/>
+                <entry key="211" type="xstring" value="q34IdealLengHackerRankTest"/>
+                <entry key="212" type="xstring" value="q36Level4"/>
+            </config>
+            <config key="excluded_names">
+                <entry key="array-size" type="xint" value="0"/>
+            </config>
+            <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
+            <config key="name_pattern">
+                <entry key="pattern" type="xstring" value=""/>
+                <entry key="type" type="xstring" value="Wildcard"/>
+                <entry key="caseSensitive" type="xboolean" value="true"/>
+                <entry key="excludeMatching" type="xboolean" value="false"/>
+            </config>
+            <config key="datatype">
+                <config key="typelist">
+                    <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
+                    <entry key="org.knime.core.data.date.DateAndTimeValue" type="xboolean" value="false"/>
+                </config>
+            </config>
+        </config>
+        <config key="EXPRESSION_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="EXPRESSION" type="xstring" value="toNull(replace($$CURRENTCOLUMN$$, &quot;#NULL!&quot;, &quot;&quot;))"/>
+        <config key="APPEND_OR_REPLACE_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="APPEND_OR_REPLACE" type="xstring" value="REPLACE_COLUMNS"/>
+        <config key="APPEND_COLUMN_SUFFIX_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="false"/>
+        </config>
+        <entry key="APPEND_COLUMN_SUFFIX" type="xstring" value="_transformed"/>
+        <config key="Abort execution on evaluation errors_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="Abort execution on evaluation errors" type="xboolean" value="true"/>
+        <config key="Insert missing values as null_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="Insert missing values as null" type="xboolean" value="true"/>
+    </config>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value="Node 3"/>
+        <entry key="contentType" type="xstring" value="text/plain"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="387"/>
+        <entry key="y-coordinate" type="xint" value="399"/>
+        <entry key="width" type="xint" value="106"/>
+        <entry key="height" type="xint" value="15"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="16777215"/>
+        <entry key="defFontSize" type="xint" value="9"/>
+        <entry key="annotation-version" type="xint" value="20230412"/>
+        <config key="styles">
+            <config key="style_0">
+                <entry key="start" type="xint" value="5"/>
+                <entry key="length" type="xint" value="1"/>
+                <entry key="fontname" type="xstring" value="Arial"/>
+                <entry key="fontstyle" type="xint" value="0"/>
+                <entry key="fontsize" type="xint" value="9"/>
+                <entry key="fgcolor" type="xint" value="0"/>
+            </config>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.stringmanipulation.multicolumn.MultiColumnStringManipulationNodeFactory"/>
+    <entry key="node-name" type="xstring" value="String Manipulation (Multi Column)"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.0.v202310301555"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Javasnippet"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.javasnippet.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301555"/>
+    <config key="factory_settings"/>
+    <entry key="name" type="xstring" value="String Manipulation (Multi Column)"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 25090, Cols: 139"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="167765c2-4072-474f-8a41-7027b2d17244"/>
+    </config>
+</config>
