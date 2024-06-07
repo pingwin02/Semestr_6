@@ -1,0 +1,37 @@
+version: '3'
+services:
+  library.notificationservice2:
+    container_name: library.notificationservice2
+    build: Library.NotificationService2
+    ports:
+      - 92:80
+    environment:
+      - LibraryWebApiServiceHost=http://library.webapi
+    networks:
+      - api
+  library.web:
+    container_name: library.web
+    build: Library.Web
+    ports:
+      - 90:80
+    environment:
+      - LibraryWebApiServiceHost=http://library.webapi
+    networks:
+      - api
+  library.webapi:
+    container_name: library.webapi
+    build: Library.WebApi
+    ports:
+      - 91:80
+    networks:
+      - api
+  rabbitmq:
+    container_name: rabbit
+    image: rabbitmq:management
+    ports:
+      - 15672:15672
+      - 5672:5672
+    networks:
+      - api
+networks:
+  api:
