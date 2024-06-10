@@ -1,0 +1,14 @@
+Szofer == posiada some Pojazd and posiada only Limuzyna
+Taksowkarz == posiada some Pojazd and posiada only SamochodOsobowy
+Przystankowicz == zamawia some (zawiera some Przystanek)
+KrotkiPrzejazd == zawiera exactly 1 Przystanek
+SredniPrzejazd == (zawiera min 2 Przystanek) and (zawiera max 4 Przystanek)
+DlugiPrzejazd == zawiera min 5 Przystanek
+Kierowca == Szofer or Taksowkarz
+Pojazd == Limuzyna or SamochodOsobowy
+Przejazd == DlugiPrzejazd or KrotkiPrzejazd or SredniPrzejazd
+
+DL Query:
+Taksowkarz and posiada some Limuzyna - Nothing
+KrotkiPrzejazd and zawiera exactly 0 Przystanek - Nothing
+Przystankowicz and zamawia some (zawiera exactly 0 Przystanek) - Nothing

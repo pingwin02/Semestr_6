@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY taxi "http://www.semanticweb.org/damian/ontologies/2024/4/taxi#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:taxi="http://www.semanticweb.org/damian/ontologies/2024/4/taxi#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <Ontology rdf:about="http://www.semanticweb.org/damian/ontologies/2024/4/taxi"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#posiada -->
+
+    <ObjectProperty rdf:about="&taxi;posiada">
+        <rdfs:domain rdf:resource="&taxi;Kierowca"/>
+        <rdfs:range rdf:resource="&taxi;Pojazd"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#wykonuje -->
+
+    <ObjectProperty rdf:about="&taxi;wykonuje">
+        <rdfs:domain rdf:resource="&taxi;Kierowca"/>
+        <rdfs:range rdf:resource="&taxi;Przejazd"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#zamawia -->
+
+    <ObjectProperty rdf:about="&taxi;zamawia">
+        <rdfs:domain rdf:resource="&taxi;Klient"/>
+        <rdfs:range rdf:resource="&taxi;Przejazd"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#zawiera -->
+
+    <ObjectProperty rdf:about="&taxi;zawiera">
+        <rdfs:domain rdf:resource="&taxi;Przejazd"/>
+        <rdfs:range rdf:resource="&taxi;Przystanek"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#DlugiPrzejazd -->
+
+    <Class rdf:about="&taxi;DlugiPrzejazd">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;zawiera"/>
+                <onClass rdf:resource="&taxi;Przystanek"/>
+                <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">5</minQualifiedCardinality>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&taxi;Przejazd"/>
+        <disjointWith rdf:resource="&taxi;KrotkiPrzejazd"/>
+        <disjointWith rdf:resource="&taxi;SredniPrzejazd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Kierowca -->
+
+    <Class rdf:about="&taxi;Kierowca">
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&taxi;Szofer"/>
+                    <rdf:Description rdf:about="&taxi;Taksowkarz"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <disjointWith rdf:resource="&taxi;Klient"/>
+        <disjointWith rdf:resource="&taxi;Pojazd"/>
+        <disjointWith rdf:resource="&taxi;Przejazd"/>
+        <disjointWith rdf:resource="&taxi;Przystanek"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Klient -->
+
+    <Class rdf:about="&taxi;Klient">
+        <disjointWith rdf:resource="&taxi;Pojazd"/>
+        <disjointWith rdf:resource="&taxi;Przejazd"/>
+        <disjointWith rdf:resource="&taxi;Przystanek"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#KrotkiPrzejazd -->
+
+    <Class rdf:about="&taxi;KrotkiPrzejazd">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;zawiera"/>
+                <onClass rdf:resource="&taxi;Przystanek"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&taxi;Przejazd"/>
+        <disjointWith rdf:resource="&taxi;SredniPrzejazd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Limuzyna -->
+
+    <Class rdf:about="&taxi;Limuzyna">
+        <rdfs:subClassOf rdf:resource="&taxi;Pojazd"/>
+        <disjointWith rdf:resource="&taxi;SamochodOsobowy"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Pojazd -->
+
+    <Class rdf:about="&taxi;Pojazd">
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&taxi;Limuzyna"/>
+                    <rdf:Description rdf:about="&taxi;SamochodOsobowy"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <disjointWith rdf:resource="&taxi;Przejazd"/>
+        <disjointWith rdf:resource="&taxi;Przystanek"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Przejazd -->
+
+    <Class rdf:about="&taxi;Przejazd">
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&taxi;DlugiPrzejazd"/>
+                    <rdf:Description rdf:about="&taxi;KrotkiPrzejazd"/>
+                    <rdf:Description rdf:about="&taxi;SredniPrzejazd"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <disjointWith rdf:resource="&taxi;Przystanek"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Przystanek -->
+
+    <Class rdf:about="&taxi;Przystanek"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Przystankowicz -->
+
+    <Class rdf:about="&taxi;Przystankowicz">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;zamawia"/>
+                <someValuesFrom>
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;zawiera"/>
+                        <someValuesFrom rdf:resource="&taxi;Przystanek"/>
+                    </Restriction>
+                </someValuesFrom>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&taxi;Klient"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#SamochodOsobowy -->
+
+    <Class rdf:about="&taxi;SamochodOsobowy">
+        <rdfs:subClassOf rdf:resource="&taxi;Pojazd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#SredniPrzejazd -->
+
+    <Class rdf:about="&taxi;SredniPrzejazd">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;zawiera"/>
+                        <onClass rdf:resource="&taxi;Przystanek"/>
+                        <minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</minQualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;zawiera"/>
+                        <onClass rdf:resource="&taxi;Przystanek"/>
+                        <maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">4</maxQualifiedCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&taxi;Przejazd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Szofer -->
+
+    <Class rdf:about="&taxi;Szofer">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;posiada"/>
+                        <someValuesFrom rdf:resource="&taxi;Pojazd"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;posiada"/>
+                        <allValuesFrom rdf:resource="&taxi;Limuzyna"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&taxi;Kierowca"/>
+        <disjointWith rdf:resource="&taxi;Taksowkarz"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#Taksowkarz -->
+
+    <Class rdf:about="&taxi;Taksowkarz">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;posiada"/>
+                        <someValuesFrom rdf:resource="&taxi;Pojazd"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="&taxi;posiada"/>
+                        <allValuesFrom rdf:resource="&taxi;SamochodOsobowy"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="&taxi;Kierowca"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#anna -->
+
+    <NamedIndividual rdf:about="&taxi;anna">
+        <taxi:zamawia rdf:resource="&taxi;studencki"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#bezposredni -->
+
+    <NamedIndividual rdf:about="&taxi;bezposredni">
+        <rdf:type>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;zawiera"/>
+                <allValuesFrom>
+                    <Class>
+                        <oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&taxi;dworzecGlowny"/>
+                        </oneOf>
+                    </Class>
+                </allValuesFrom>
+            </Restriction>
+        </rdf:type>
+        <taxi:zawiera rdf:resource="&taxi;dworzecGlowny"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#bogdan -->
+
+    <NamedIndividual rdf:about="&taxi;bogdan">
+        <taxi:zamawia rdf:resource="&taxi;dworcowy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#dworcowy -->
+
+    <NamedIndividual rdf:about="&taxi;dworcowy">
+        <rdf:type>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;zawiera"/>
+                <allValuesFrom>
+                    <Class>
+                        <oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&taxi;dworzecGlowny"/>
+                            <rdf:Description rdf:about="&taxi;galeriaBaltycka"/>
+                        </oneOf>
+                    </Class>
+                </allValuesFrom>
+            </Restriction>
+        </rdf:type>
+        <taxi:zawiera rdf:resource="&taxi;dworzecGlowny"/>
+        <taxi:zawiera rdf:resource="&taxi;galeriaBaltycka"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#dworzecGlowny -->
+
+    <NamedIndividual rdf:about="&taxi;dworzecGlowny"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#galeriaBaltycka -->
+
+    <NamedIndividual rdf:about="&taxi;galeriaBaltycka"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#jan -->
+
+    <NamedIndividual rdf:about="&taxi;jan">
+        <rdf:type>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;posiada"/>
+                <onClass rdf:resource="&taxi;Pojazd"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdf:type>
+        <taxi:wykonuje rdf:resource="&taxi;dworcowy"/>
+        <taxi:posiada rdf:resource="&taxi;maybach"/>
+        <taxi:wykonuje rdf:resource="&taxi;studencki"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#maybach -->
+
+    <NamedIndividual rdf:about="&taxi;maybach">
+        <rdf:type rdf:resource="&taxi;Limuzyna"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#politechnikaGdanska -->
+
+    <NamedIndividual rdf:about="&taxi;politechnikaGdanska"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2024/4/taxi#studencki -->
+
+    <NamedIndividual rdf:about="&taxi;studencki">
+        <rdf:type>
+            <Restriction>
+                <onProperty rdf:resource="&taxi;zawiera"/>
+                <allValuesFrom>
+                    <Class>
+                        <oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&taxi;dworzecGlowny"/>
+                            <rdf:Description rdf:about="&taxi;politechnikaGdanska"/>
+                            <rdf:Description rdf:about="&taxi;galeriaBaltycka"/>
+                        </oneOf>
+                    </Class>
+                </allValuesFrom>
+            </Restriction>
+        </rdf:type>
+        <taxi:zawiera rdf:resource="&taxi;dworzecGlowny"/>
+        <taxi:zawiera rdf:resource="&taxi;galeriaBaltycka"/>
+        <taxi:zawiera rdf:resource="&taxi;politechnikaGdanska"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;anna"/>
+            <rdf:Description rdf:about="&taxi;jan"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;anna"/>
+            <rdf:Description rdf:about="&taxi;bogdan"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;dworcowy"/>
+            <rdf:Description rdf:about="&taxi;studencki"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;dworzecGlowny"/>
+            <rdf:Description rdf:about="&taxi;galeriaBaltycka"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;galeriaBaltycka"/>
+            <rdf:Description rdf:about="&taxi;politechnikaGdanska"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;bogdan"/>
+            <rdf:Description rdf:about="&taxi;jan"/>
+        </distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDifferent"/>
+        <distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="&taxi;dworzecGlowny"/>
+            <rdf:Description rdf:about="&taxi;politechnikaGdanska"/>
+        </distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
